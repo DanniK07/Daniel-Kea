@@ -1,0 +1,49 @@
+.footer {
+  border-top: var(--hairline-soft);
+  padding-block: var(--space-10);
+  margin-top: var(--space-10);
+}
+
+.inner {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-8);
+  align-items: flex-start;
+}
+
+.brand {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.wordmark {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  letter-spacing: 0.015em;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.caption {
+  color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.meta {
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+  font-weight: 300;
+  line-height: var(--leading-loose);
+}
+
+@media (max-width: 760px) {
+  .inner {
+    flex-direction: column;
+  }
+}
+

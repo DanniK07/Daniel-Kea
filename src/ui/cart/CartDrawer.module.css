@@ -1,0 +1,224 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: color-mix(in oklab, var(--color-ink) 14%, transparent);
+  backdrop-filter: blur(6px);
+}
+
+.panel {
+  position: fixed;
+  inset-block: 0;
+  right: 0;
+  width: min(420px, 100%);
+  z-index: 50;
+  display: flex;
+}
+
+.content {
+  background: var(--color-paper);
+  border-left: var(--hairline);
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) var(--space-5) var(--space-4);
+  border-bottom: var(--hairline);
+}
+
+.title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.close {
+  border: 0;
+  background: transparent;
+  font-size: var(--text-sm);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.body {
+  flex: 1;
+  padding: var(--space-5);
+  overflow: auto;
+}
+
+.empty {
+  margin: 0;
+  color: color-mix(in oklab, var(--color-ink) 70%, transparent);
+  line-height: var(--leading-loose);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: var(--space-4);
+}
+
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  border-bottom: 1px solid
+    color-mix(in oklab, var(--color-ink) 10%, transparent);
+  padding-bottom: var(--space-3);
+}
+
+.itemMeta {
+  display: grid;
+  gap: 4px;
+}
+
+.itemName {
+  font-size: var(--text-sm);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.itemDetail {
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+}
+
+.itemRight {
+  text-align: right;
+  display: grid;
+  gap: 4px;
+}
+
+.itemPrice {
+  font-size: var(--text-sm);
+}
+
+.itemQty {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 65%, transparent);
+}
+
+.itemUnit {
+  opacity: 0.7;
+}
+
+.qtyBtn {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 14%, transparent);
+  background: transparent;
+  width: 28px;
+  height: 28px;
+  line-height: 1;
+  cursor: pointer;
+  transition: border-color var(--duration-base) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.qtyBtn:hover {
+  border-color: color-mix(in oklab, var(--color-ink) 26%, transparent);
+  transform: translateY(-1px);
+}
+
+.qtyValue {
+  min-width: 64px;
+  text-align: center;
+}
+
+.remove {
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 65%, transparent);
+  padding: 0;
+  justify-self: end;
+}
+
+.remove:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 1px;
+}
+
+.footer {
+  border-top: var(--hairline);
+  padding: var(--space-4) var(--space-5) var(--space-5);
+  display: grid;
+  gap: var(--space-4);
+}
+
+.totalRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: var(--text-sm);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.checkout {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 20%, transparent);
+  background: var(--color-ink);
+  color: var(--color-ivory);
+  padding: 12px 14px;
+  font-size: var(--text-sm);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: background var(--duration-base) var(--ease-out),
+    border-color var(--duration-base) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.checkout:hover {
+  background: color-mix(in oklab, var(--color-ink) 86%, var(--color-paper));
+  border-color: color-mix(in oklab, var(--color-ink) 40%, transparent);
+  transform: translateY(-1px);
+}
+
+.checkout:active {
+  transform: translateY(0);
+}
+
+.clear {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 14%, transparent);
+  background: transparent;
+  padding: 10px 14px;
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color var(--duration-base) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out);
+}
+
+.clear:hover {
+  border-color: color-mix(in oklab, var(--color-ink) 26%, transparent);
+  transform: translateY(-1px);
+}
+

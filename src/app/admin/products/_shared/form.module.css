@@ -1,0 +1,106 @@
+.section {
+  padding-top: var(--space-8);
+  display: grid;
+  gap: var(--space-5);
+}
+
+.h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(22px, 2.8vw, 28px);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+
+.form {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-7);
+  border: var(--hairline-soft);
+  background: var(--color-paper);
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-5);
+}
+
+.label {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.labelText {
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 65%, transparent);
+  font-weight: 400;
+}
+
+.input,
+.textarea,
+.select {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 12%, transparent);
+  background: transparent;
+  padding: 14px 16px;
+  font-size: var(--text-md);
+  outline: none;
+  transition: border-color var(--duration-base) var(--ease-out);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
+
+.input:focus,
+.textarea:focus,
+.select:focus {
+  border-color: color-mix(in oklab, var(--color-ink) 24%, transparent);
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: color-mix(in oklab, var(--color-ink) 45%, transparent);
+}
+
+.textarea {
+  min-height: 140px;
+  resize: vertical;
+  line-height: var(--leading-normal);
+}
+
+.select {
+  cursor: pointer;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding-top: var(--space-2);
+}
+
+.checkboxRow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding-top: var(--space-1);
+}
+
+.checkboxLabel {
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 70%, transparent);
+  font-weight: 400;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+

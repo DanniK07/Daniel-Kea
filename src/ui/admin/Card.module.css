@@ -1,0 +1,12 @@
+.card {
+  border: var(--hairline-soft);
+  background: var(--color-paper);
+  padding: var(--space-7);
+  display: grid;
+  gap: var(--space-4);
+  transition: border-color var(--duration-base) var(--ease-out);
+}
+
+.card:hover {
+  border-color: color-mix(in oklab, var(--color-ink) 14%, transparent);
+}

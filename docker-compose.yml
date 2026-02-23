@@ -1,0 +1,17 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: daniel-kea-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: danielkea
+      POSTGRES_PASSWORD: danielkea
+      POSTGRES_DB: danielkea
+    ports:
+      - "5432:5432"
+    volumes:
+      - daniel_kea_pg:/var/lib/postgresql/data
+
+volumes:
+  daniel_kea_pg:
+

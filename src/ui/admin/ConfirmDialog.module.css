@@ -1,0 +1,68 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in oklab, var(--color-ink) 35%, transparent);
+  backdrop-filter: blur(8px) saturate(180%);
+  z-index: 50;
+  animation: fadeIn var(--duration-base) var(--ease-out);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--color-paper);
+  border: var(--hairline-soft);
+  padding: var(--space-7);
+  min-width: 400px;
+  max-width: 90vw;
+  z-index: 51;
+  display: grid;
+  gap: var(--space-5);
+  animation: slideUp var(--duration-slow) var(--ease-editorial);
+  box-shadow: 0 20px 60px color-mix(in oklab, var(--color-ink) 8%, transparent);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(20px, 2.5vw, 24px);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+
+.description {
+  margin: 0;
+  color: color-mix(in oklab, var(--color-ink) 70%, transparent);
+  line-height: var(--leading-loose);
+  letter-spacing: 0.003em;
+}
+
+.actions {
+  display: flex;
+  gap: var(--space-4);
+  justify-content: flex-end;
+  padding-top: var(--space-3);
+}

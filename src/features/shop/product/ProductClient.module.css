@@ -1,0 +1,117 @@
+.buy {
+  display: grid;
+  gap: var(--space-5);
+  padding-top: var(--space-5);
+  border-top: var(--hairline-soft);
+}
+
+.controls {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.control {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 65%, transparent);
+  font-weight: 400;
+}
+
+.trigger {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4);
+  border: 1px solid color-mix(in oklab, var(--color-ink) 12%, transparent);
+  background: transparent;
+  padding: 14px 16px;
+  cursor: pointer;
+  transition: border-color var(--duration-base) var(--ease-out);
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  color: var(--color-ink);
+}
+
+.trigger:hover {
+  border-color: color-mix(in oklab, var(--color-ink) 20%, transparent);
+}
+
+.trigger:focus {
+  border-color: color-mix(in oklab, var(--color-ink) 24%, transparent);
+}
+
+.content {
+  background: var(--color-paper);
+  border: var(--hairline-soft);
+  box-shadow: none;
+  padding: var(--space-1);
+}
+
+.viewport {
+  padding: var(--space-2);
+}
+
+.item {
+  font-size: var(--text-sm);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  padding: var(--space-3) var(--space-4);
+  cursor: pointer;
+  outline: none;
+  transition: background var(--duration-fast) var(--ease-out);
+  font-weight: 400;
+  color: var(--color-ink);
+}
+
+.item[data-highlighted] {
+  background: color-mix(in oklab, var(--color-ink) 5%, transparent);
+}
+
+.add {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 18%, transparent);
+  background: var(--color-ink);
+  color: var(--color-ivory);
+  padding: 14px 18px;
+  font-size: var(--text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all var(--duration-base) var(--ease-out);
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+.add:hover:not(:disabled) {
+  background: color-mix(in oklab, var(--color-ink) 90%, transparent);
+  border-color: color-mix(in oklab, var(--color-ink) 26%, transparent);
+  transform: translateY(-1px);
+}
+
+.add:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.add:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.hint {
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+  font-weight: 300;
+  padding-top: var(--space-1);
+}
+

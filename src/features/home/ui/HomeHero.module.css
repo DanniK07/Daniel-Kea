@@ -1,0 +1,89 @@
+.hero {
+  max-width: 840px;
+  display: grid;
+  gap: var(--space-6);
+  padding-bottom: var(--space-10);
+}
+
+.kicker {
+  font-size: var(--text-xs);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+  font-weight: 400;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(42px, 6.5vw, 68px);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+  max-width: 20ch;
+}
+
+.lede {
+  margin: 0;
+  max-width: 58ch;
+  font-size: var(--text-lg);
+  line-height: var(--leading-loose);
+  color: color-mix(in oklab, var(--color-ink) 75%, transparent);
+  letter-spacing: 0.005em;
+}
+
+.ctas {
+  display: flex;
+  gap: var(--space-5);
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: var(--space-3);
+}
+
+.primary,
+.secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 18px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: var(--text-sm);
+  text-decoration: none;
+  transition: all var(--duration-base) var(--ease-out);
+  border-radius: 0;
+}
+
+.primary {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 16%, transparent);
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.primary:hover {
+  background: color-mix(in oklab, var(--color-paper) 60%, var(--color-ivory));
+  border-color: color-mix(in oklab, var(--color-ink) 24%, transparent);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.primary:active {
+  transform: translateY(0);
+}
+
+.secondary {
+  border: 1px solid transparent;
+  color: color-mix(in oklab, var(--color-ink) 70%, transparent);
+}
+
+.secondary:hover {
+  border-color: color-mix(in oklab, var(--color-ink) 14%, transparent);
+  color: var(--color-ink);
+  text-decoration: none;
+  transform: translateY(-0.5px);
+}
+
+.secondary:active {
+  transform: translateY(0);
+}
+

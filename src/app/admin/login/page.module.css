@@ -1,0 +1,44 @@
+.main {
+  padding-top: var(--space-10);
+  background: var(--color-ivory);
+  min-height: 100vh;
+}
+
+.shell {
+  max-width: 540px;
+  margin-inline: auto;
+  display: grid;
+  gap: var(--space-7);
+  padding-block: var(--space-10);
+}
+
+.header {
+  display: grid;
+  gap: var(--space-4);
+  text-align: center;
+}
+
+.kicker {
+  font-size: var(--text-xs);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+  font-weight: 400;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(32px, 4.5vw, 48px);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0;
+  color: color-mix(in oklab, var(--color-ink) 70%, transparent);
+  line-height: var(--leading-loose);
+  letter-spacing: 0.003em;
+}
+

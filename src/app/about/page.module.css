@@ -1,0 +1,51 @@
+.main {
+  padding-top: var(--space-9);
+}
+
+.header {
+  display: grid;
+  gap: var(--space-4);
+  padding-block: var(--space-8);
+  border-bottom: var(--hairline-soft);
+  max-width: 900px;
+}
+
+.kicker {
+  font-size: var(--text-xs);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+  font-weight: 400;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(36px, 5.2vw, 56px);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0;
+  color: color-mix(in oklab, var(--color-ink) 70%, transparent);
+  line-height: var(--leading-loose);
+  font-size: var(--text-lg);
+  letter-spacing: 0.003em;
+}
+
+.body {
+  padding-top: var(--space-8);
+  max-width: 78ch;
+  display: grid;
+  gap: var(--space-6);
+  line-height: var(--leading-loose);
+  color: color-mix(in oklab, var(--color-ink) 72%, transparent);
+  letter-spacing: 0.003em;
+}
+
+.body p {
+  margin: 0;
+}
+

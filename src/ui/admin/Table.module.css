@@ -1,0 +1,29 @@
+.table {
+  border: var(--hairline-soft);
+  background: var(--color-paper);
+  margin-top: var(--space-8);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-5);
+  padding: var(--space-5) var(--space-7);
+  border-top: var(--hairline-soft);
+  transition: background var(--duration-base) var(--ease-out);
+}
+
+.row:first-child {
+  border-top: 0;
+}
+
+.row:hover {
+  background: color-mix(in oklab, var(--color-ink) 2%, transparent);
+}
+
+.cell {
+  flex: 1;
+  display: grid;
+  gap: var(--space-2);
+}

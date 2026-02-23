@@ -1,0 +1,54 @@
+:root {
+  /* Color - Refinado para premium editorial */
+  --color-ink: #0a0a0b;
+  --color-ivory: #f5f0e7;
+  --color-paper: #faf9f5;
+  --color-mist: #d4d4d4;
+  --color-warm-gray: #a8a29a;
+  --color-beige: #e6ddcd;
+
+  /* Typography - Jerarquía editorial refinada */
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, "Times New Roman", serif;
+
+  --text-xs: 11px;
+  --text-sm: 13px;
+  --text-md: 15px;
+  --text-lg: 17px;
+  --text-xl: 21px;
+  --text-2xl: 26px;
+  --text-3xl: 34px;
+  --text-4xl: 46px;
+  --text-5xl: 58px;
+
+  --leading-tight: 1.08;
+  --leading-normal: 1.6;
+  --leading-loose: 1.85;
+
+  /* Spacing - Sistema editorial amplio */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 14px;
+  --space-4: 20px;
+  --space-5: 28px;
+  --space-6: 40px;
+  --space-7: 56px;
+  --space-8: 80px;
+  --space-9: 120px;
+  --space-10: 160px;
+
+  /* Layout */
+  --container: 1200px;
+
+  /* Motion - Transiciones más sutiles y elegantes */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --ease-editorial: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --duration-fast: 120ms;
+  --duration-base: 200ms;
+  --duration-slow: 400ms;
+
+  /* Borders - Líneas más sutiles */
+  --hairline: 1px solid color-mix(in oklab, var(--color-ink) 10%, transparent);
+  --hairline-soft: 1px solid color-mix(in oklab, var(--color-ink) 6%, transparent);
+}

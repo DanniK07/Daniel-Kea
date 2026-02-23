@@ -1,0 +1,134 @@
+.main {
+  padding-top: var(--space-10);
+}
+
+.kicker {
+  font-size: var(--text-xs);
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 60%, transparent);
+  font-weight: 400;
+}
+
+.top {
+  padding-bottom: var(--space-8);
+}
+
+.editorial {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-8);
+  padding-block: var(--space-10);
+  border-top: var(--hairline-soft);
+}
+
+.column {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 32ch;
+}
+
+.h2 {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+
+.p {
+  margin: 0;
+  color: color-mix(in oklab, var(--color-ink) 72%, transparent);
+  line-height: var(--leading-loose);
+  letter-spacing: 0.003em;
+}
+
+.newsletter {
+  margin-top: var(--space-10);
+  padding-block: var(--space-10);
+  border-top: var(--hairline-soft);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: var(--space-8);
+  align-items: start;
+}
+
+.newsHeader {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.newsTitle {
+  margin: 0;
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(28px, 3.8vw, 38px);
+  line-height: var(--leading-tight);
+  letter-spacing: -0.01em;
+}
+
+.newsText {
+  margin: 0;
+  color: color-mix(in oklab, var(--color-ink) 72%, transparent);
+  line-height: var(--leading-loose);
+  letter-spacing: 0.003em;
+}
+
+.newsForm {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.newsInput {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 12%, transparent);
+  background: transparent;
+  padding: 14px 16px;
+  font-size: var(--text-md);
+  outline: none;
+  transition: border-color var(--duration-base) var(--ease-out);
+  font-family: var(--font-sans);
+}
+
+.newsInput:focus {
+  border-color: color-mix(in oklab, var(--color-ink) 24%, transparent);
+}
+
+.newsInput::placeholder {
+  color: color-mix(in oklab, var(--color-ink) 45%, transparent);
+  letter-spacing: 0.01em;
+}
+
+.newsButton {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 18%, transparent);
+  background: var(--color-ink);
+  color: var(--color-ivory);
+  padding: 14px 18px;
+  font-size: var(--text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out);
+  font-family: var(--font-sans);
+}
+
+.newsButton:hover {
+  transform: translateY(-1px);
+  background: color-mix(in oklab, var(--color-ink) 90%, transparent);
+  border-color: color-mix(in oklab, var(--color-ink) 28%, transparent);
+}
+
+.newsButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 920px) {
+  .editorial {
+    grid-template-columns: 1fr;
+  }
+
+  .newsletter {
+    grid-template-columns: 1fr;
+  }
+}
+

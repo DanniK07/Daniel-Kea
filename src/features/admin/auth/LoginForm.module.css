@@ -1,0 +1,85 @@
+.form {
+  display: grid;
+  gap: var(--space-5);
+  padding: var(--space-7);
+  border: var(--hairline-soft);
+  background: var(--color-paper);
+}
+
+.label {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.labelText {
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ink) 65%, transparent);
+  font-weight: 400;
+}
+
+.input {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 12%, transparent);
+  background: transparent;
+  padding: 14px 16px;
+  font-size: var(--text-md);
+  outline: none;
+  transition: border-color var(--duration-base) var(--ease-out);
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+}
+
+.input:focus {
+  border-color: color-mix(in oklab, var(--color-ink) 24%, transparent);
+}
+
+.input::placeholder {
+  color: color-mix(in oklab, var(--color-ink) 45%, transparent);
+  letter-spacing: 0.01em;
+}
+
+.error {
+  font-size: var(--text-xs);
+  line-height: var(--leading-normal);
+  color: color-mix(in oklab, #dc2626 75%, transparent);
+  border-left: 2px solid color-mix(in oklab, #dc2626 25%, transparent);
+  padding-left: var(--space-4);
+  padding-top: var(--space-1);
+  padding-bottom: var(--space-1);
+  background: color-mix(in oklab, #dc2626 3%, transparent);
+  letter-spacing: 0.08em;
+}
+
+.submit {
+  border: 1px solid color-mix(in oklab, var(--color-ink) 18%, transparent);
+  background: var(--color-ink);
+  color: var(--color-ivory);
+  padding: 14px 18px;
+  font-size: var(--text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all var(--duration-base) var(--ease-out);
+  font-family: var(--font-sans);
+  font-weight: 400;
+}
+
+.submit:hover:not(:disabled) {
+  background: color-mix(in oklab, var(--color-ink) 90%, transparent);
+  border-color: color-mix(in oklab, var(--color-ink) 26%, transparent);
+  transform: translateY(-1px);
+}
+
+.submit:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+

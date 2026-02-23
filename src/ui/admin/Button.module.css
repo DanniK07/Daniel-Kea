@@ -1,0 +1,87 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--duration-base) var(--ease-out);
+  outline: none;
+  font-weight: 400;
+}
+
+.button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+.button:focus-visible {
+  outline: 2px solid color-mix(in oklab, var(--color-ink) 30%, transparent);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+/* Sizes */
+.sm {
+  padding: 9px 12px;
+  font-size: var(--text-xs);
+  letter-spacing: 0.2em;
+}
+
+.md {
+  padding: 14px 18px;
+}
+
+/* Variants */
+.primary {
+  border-color: color-mix(in oklab, var(--color-ink) 18%, transparent);
+  background: var(--color-ink);
+  color: var(--color-ivory);
+}
+
+.primary:hover:not(:disabled) {
+  background: color-mix(in oklab, var(--color-ink) 90%, transparent);
+  border-color: color-mix(in oklab, var(--color-ink) 26%, transparent);
+  transform: translateY(-1px);
+}
+
+.primary:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.ghost {
+  border-color: color-mix(in oklab, var(--color-ink) 12%, transparent);
+  background: transparent;
+  color: var(--color-ink);
+}
+
+.ghost:hover:not(:disabled) {
+  border-color: color-mix(in oklab, var(--color-ink) 20%, transparent);
+  background: color-mix(in oklab, var(--color-ink) 3%, transparent);
+  transform: translateY(-0.5px);
+}
+
+.ghost:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.danger {
+  border-color: color-mix(in oklab, var(--color-ink) 12%, transparent);
+  background: transparent;
+  color: color-mix(in oklab, var(--color-ink) 65%, transparent);
+}
+
+.danger:hover:not(:disabled) {
+  border-color: color-mix(in oklab, var(--color-ink) 20%, transparent);
+  background: color-mix(in oklab, var(--color-ink) 3%, transparent);
+  color: color-mix(in oklab, var(--color-ink) 80%, transparent);
+  transform: translateY(-0.5px);
+}
+
+.danger:active:not(:disabled) {
+  transform: translateY(0);
+}

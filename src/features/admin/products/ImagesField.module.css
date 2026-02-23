@@ -1,0 +1,33 @@
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-top: var(--space-2);
+}
+
+.upload {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border: 1px solid color-mix(in oklab, var(--color-ink) 14%, transparent);
+  background: transparent;
+  font-size: var(--text-xs);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.upload input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.error {
+  font-size: var(--text-xs);
+  color: color-mix(in oklab, var(--color-ink) 70%, transparent);
+}
+
