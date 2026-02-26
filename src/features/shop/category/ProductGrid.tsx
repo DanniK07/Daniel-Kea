@@ -27,18 +27,18 @@ export const ProductGrid = memo(function ProductGrid({ products }: Props) {
       animate="visible"
       variants={{
         hidden: {},
-        visible: { transition: { staggerChildren: 0.08 } },
+        visible: { transition: { staggerChildren: 0.12 } },
       }}
     >
       {products.map((p) => (
         <motion.div
           key={p.id}
           variants={{
-            hidden: { opacity: 0, y: 14 },
+            hidden: { opacity: 0, y: 20 },
             visible: {
               opacity: 1,
               y: 0,
-              transition: { duration: 0.45, ease: EASE_EDITORIAL },
+              transition: { duration: 0.8, ease: EASE_EDITORIAL },
             },
           }}
         >

@@ -1,19 +1,47 @@
+export type CheckoutLineItem = {
+  name: string;
+  priceCents: number;
+  quantity: number;
+};
+
 export type CheckoutInput = {
+  orderId: string;
   currency: string;
-  items: Array<{ productId: string; quantity: number }>;
+  items: CheckoutLineItem[];
 };
 
 export type CheckoutResult = {
   checkoutUrl: string;
   sessionId: string;
+  provider: "stripe-test";
 };
 
 /**
- * Placeholder Stripe integration point.
- * In el futuro, este método creará una sesión de Stripe Checkout y devolverá la URL.
+ * Punto de integración con Stripe (modo test).
+ *
+ * Implementación actual:
+ * - Modo test: genera una URL interna de prueba y un sessionId determinista.
+ * - Lista para ser sustituida por la integración real de Stripe sin tocar el resto del código.
  */
-export async function createCheckoutSession(_input: CheckoutInput): Promise<CheckoutResult> {
-  void _input;
-  throw new Error("Stripe aún no está integrado. Implementar createCheckoutSession().");
+export async function createCheckoutSession(
+  input: CheckoutInput,
+): Promise<CheckoutResult> {
+  const baseUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000";
+
+  const sessionId = `stripe_test_session_${input.orderId}`;
+  const checkoutUrl = `${baseUrl}/checkout/test?sessionId=${encodeURIComponent(
+    sessionId,
+  )}&orderId=${encodeURIComponent(input.orderId)}`;
+
+  void input.items;
+  void input.currency;
+
+  return {
+    checkoutUrl,
+    sessionId,
+    provider: "stripe-test",
+  };
 }
 
+export default createCheckoutSession;

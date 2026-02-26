@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import styles from "./SiteHeader.module.css";
 import { Container } from "@/ui/components/Container";
 import { useCartStore } from "@/state/cartStore";
@@ -10,9 +11,20 @@ const EASE_MICRO = [0.18, 0.89, 0.32, 1] as [number, number, number, number];
 
 export function SiteHeader() {
   const openCart = useCartStore((s) => s.openCart);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+    };
+
+    onScroll();
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
-    <header className={styles.header}>
+    <header className={styles.header} data-scrolled={scrolled ? "true" : "false"}>
       <Container>
         <div className={styles.inner}>
           <Link href="/" className={styles.brand} aria-label="Daniel Kéa">

@@ -222,3 +222,17 @@
   transform: translateY(-1px);
 }
 
+.checkout:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.error {
+  font-size: var(--text-xs);
+  color: color-mix(in oklab, #dc2626 80%, transparent);
+  padding: var(--space-2);
+  text-align: center;
+  border: 1px solid color-mix(in oklab, #dc2626 20%, transparent);
+  background: color-mix(in oklab, #dc2626 4%, transparent);
+}

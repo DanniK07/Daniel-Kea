@@ -1,31 +1,37 @@
 :root {
-  /* Color - Refinado para premium editorial */
-  --color-ink: #0a0a0b;
-  --color-ivory: #f5f0e7;
-  --color-paper: #faf9f5;
-  --color-mist: #d4d4d4;
-  --color-warm-gray: #a8a29a;
-  --color-beige: #e6ddcd;
+  /* Color – Paleta oscura de lujo contemporáneo */
+  --color-paper: #0b0b0d; /* Fondo principal */
+  --color-surface: #111113; /* Secciones alternas / superficies elevadas */
+  --color-ink: #ededed; /* Texto principal (no blanco puro) */
+  --color-ink-muted: #a1a1aa; /* Texto secundario */
+  --color-divider: rgba(255, 255, 255, 0.06); /* Líneas sutiles */
+  --color-ivory: #18181b; /* Alias legacy para fondos ligeramente elevados */
+  --color-mist: #27272f;
+  --color-warm-gray: #3f3f46;
+  --color-beige: #18181b;
 
-  /* Typography - Jerarquía editorial refinada */
-  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-serif: "Playfair Display", ui-serif, Georgia, "Times New Roman", serif;
+  /* Typography – Sans geométrica, jerarquía dramática */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Inter", "Segoe UI", sans-serif;
+  --font-serif: var(
+    --font-sans
+  ); /* Alias: todo se renderiza en sans para un look contemporáneo */
 
   --text-xs: 11px;
   --text-sm: 13px;
   --text-md: 15px;
-  --text-lg: 17px;
-  --text-xl: 21px;
-  --text-2xl: 26px;
-  --text-3xl: 34px;
-  --text-4xl: 46px;
-  --text-5xl: 58px;
+  --text-lg: 18px;
+  --text-xl: 22px;
+  --text-2xl: 28px;
+  --text-3xl: 38px;
+  --text-4xl: 52px;
+  --text-5xl: 68px;
 
   --leading-tight: 1.08;
-  --leading-normal: 1.6;
-  --leading-loose: 1.85;
+  --leading-normal: 1.7;
+  --leading-loose: 1.9;
 
-  /* Spacing - Sistema editorial amplio */
+  /* Spacing – Sistema editorial amplio (lujo = espacio) */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 14px;
@@ -38,17 +44,17 @@
   --space-10: 160px;
 
   /* Layout */
-  --container: 1200px;
+  --container: 1280px;
 
-  /* Motion - Transiciones más sutiles y elegantes */
+  /* Motion – Transiciones sutiles y lentas */
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
   --ease-editorial: cubic-bezier(0.2, 0.8, 0.2, 1);
-  --duration-fast: 120ms;
-  --duration-base: 200ms;
-  --duration-slow: 400ms;
+  --duration-fast: 180ms;
+  --duration-base: 320ms;
+  --duration-slow: 900ms;
 
-  /* Borders - Líneas más sutiles */
-  --hairline: 1px solid color-mix(in oklab, var(--color-ink) 10%, transparent);
-  --hairline-soft: 1px solid color-mix(in oklab, var(--color-ink) 6%, transparent);
+  /* Borders – Líneas sutiles en modo oscuro */
+  --hairline: 1px solid var(--color-divider);
+  --hairline-soft: 1px solid rgba(255, 255, 255, 0.04);
 }

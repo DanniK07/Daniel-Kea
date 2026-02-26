@@ -15,8 +15,10 @@ export default async function Home() {
         <div className={styles.top}>
           <HomeHero />
         </div>
+      </Container>
 
-        <section className={styles.editorial}>
+      <section className={styles.editorial}>
+        <Container>
           <div className={styles.column}>
             <h2 className={styles.h2}>Editorial</h2>
             <p className={styles.p}>
@@ -38,11 +40,15 @@ export default async function Home() {
               tiempo.
             </p>
           </div>
-        </section>
+        </Container>
+      </section>
 
+      <Container>
         <HomeProductGrid products={products} />
+      </Container>
 
-        <section className={styles.newsletter}>
+      <section className={styles.newsletter}>
+        <Container>
           <div className={styles.newsHeader}>
             <div className={styles.kicker}>Newsletter</div>
             <h2 className={styles.newsTitle}>Notas de atelier</h2>
@@ -66,8 +72,8 @@ export default async function Home() {
               Suscribirme
             </button>
           </form>
-        </section>
-      </Container>
+        </Container>
+      </section>
     </main>
   );
 }
